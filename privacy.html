@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tivon — Privacy Policy</title>
+<meta name="description" content="Tivon's privacy policy: what stays on your device, what is only sent with your consent, and how to withdraw it.">
+<style>
+  :root{
+    --bg:#17151F; --bg-2:#1E1B28; --fg:#F4F2F8; --fg-dim:#A9A3B8;
+    --accent:#C9C2F0; --line:rgba(201,194,240,.16); --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--fg);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",
+         "PingFang SC","PingFang TC",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:56px 20px 88px}
+  header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+  .brand{font-size:22px;font-weight:600}
+  .brand a{color:inherit;text-decoration:none}
+  nav{display:flex;gap:6px}
+  nav button{
+    background:transparent;border:1px solid var(--line);color:var(--fg-dim);
+    border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;
+  }
+  nav button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#1B1826}
+  h1{font-size:30px;line-height:1.25;margin:0 0 8px;font-weight:600;letter-spacing:-.01em}
+  .updated{color:var(--fg-dim);font-size:14px;margin:0 0 28px}
+  h2{font-size:18px;margin:36px 0 12px;font-weight:600}
+  p{margin:0 0 16px}
+  ul{margin:0 0 16px;padding-left:20px}
+  li{margin:0 0 8px}
+  .lead{color:var(--fg-dim);font-size:17px}
+  .box{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin:0 0 20px}
+  .box p:last-child{margin-bottom:0}
+  a{color:var(--accent)}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--fg-dim);font-size:14px}
+  footer a{margin-right:16px}
+  [data-i18n]{display:none}
+  [data-i18n].on{display:block}
+  span[data-i18n].on{display:inline}
+  @media (max-width:520px){ .wrap{padding:36px 18px 64px} h1{font-size:26px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand"><a href="index.html">Tivon</a></div>
+  <nav aria-label="Language">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="zh" aria-pressed="false">简体中文</button>
+    <button type="button" data-set="tw" aria-pressed="false">繁體中文</button>
+  </nav>
+</header>
+
+<!-- ENGLISH -->
+<section data-i18n="en" class="on">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 17 September 2026</p>
+
+  <p class="lead">Tivon is built so that the sensitive part — which apps you set up and what you chose in a pause — never leaves your device.</p>
+
+  <div class="box">
+    <p><strong>The short version.</strong> Your records stay on your iPhone. Analytics and crash reporting are both off until you turn them on, and you can turn them off again at any time. We never send the names of the apps you set up. We don’t track you, don’t use advertising identifiers, and don’t sell data.</p>
+  </div>
+
+  <h2>What stays on your device</h2>
+  <ul>
+    <li>Which apps you’ve set up</li>
+    <li>Every pause: when it happened, and whether you left or continued</li>
+    <li>Your settings and preferences</li>
+  </ul>
+  <p>None of this is uploaded to us. Deleting the app removes it.</p>
+
+  <h2>What we only collect with your consent</h2>
+  <p>Tivon has two separate switches, both off by default. Nothing is sent before you turn one on, and turning one on does not turn on the other.</p>
+
+  <p><strong>Product analytics</strong> — helps us see which parts of the app work. When on, we send a small set of events (for example, that you completed setup) together with your app version and build, iOS version, device model, and a randomly generated anonymous identifier. Events never contain the name of any app you set up.</p>
+
+  <p><strong>Crash reports</strong> — helps us fix crashes. When on, a crash sends the crash type, the error message, the stack of each thread, the list of loaded binaries, and basic app and device information. It also sends how often the app is opened and for how long, which is what makes it possible to calculate a crash rate. Screenshots, view hierarchies and interaction trails are switched off.</p>
+
+  <h2>What we never collect</h2>
+  <ul>
+    <li>The names or identifiers of the apps you set up</li>
+    <li>Your name, email address or contact details</li>
+    <li>Location, contacts, photos, health data, browsing or search history</li>
+    <li>Advertising identifiers (IDFA / IDFV), or any cross-app or cross-site tracking</li>
+  </ul>
+
+  <h2>Withdrawing consent</h2>
+  <p>Open Tivon’s settings and switch off either option. The corresponding service stops immediately and anything still queued on your device is deleted. Data that has already begun uploading cannot be recalled.</p>
+
+  <h2>Who processes the data</h2>
+  <p>Analytics is processed by PostHog and crash reports by Sentry, both on servers in the European Union, as processors acting on our instructions. Server-side storage of IP addresses is disabled.</p>
+
+  <h2>Purchases</h2>
+  <p>Subscriptions are handled entirely by Apple. We never see your payment details. Manage or cancel a subscription in the Settings app under your Apple Account.</p>
+
+  <h2>Age</h2>
+  <p>Tivon is made for adults and is not directed at children. We don’t knowingly collect data from anyone below the age of digital consent where they live — 16 in parts of the EU, 13 in many other places. Because both switches are off by default, nothing is collected unless someone turns one on, and switching it back off deletes whatever is still on the device.</p>
+
+  <h2>Your rights</h2>
+  <p>Because analytics and crash data carry no identifier that we can link to you, we usually cannot locate “your” data on request. You can stop all collection at any time with the switches above, and delete everything held locally by removing the app. For any question about this policy, email us.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes in a way that affects what is collected, we will update this page and the date at the top, and ask for consent again where required.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:sgbusiness046@gmail.com">sgbusiness046@gmail.com</a></p>
+</section>
+
+<!-- 简体中文 -->
+<section data-i18n="zh">
+  <h1>隐私政策</h1>
+  <p class="updated">最后更新：2026 年 9 月 17 日</p>
+
+  <p class="lead">Tivon 的设计原则是：最敏感的那部分数据——你设置了哪些 App、你在停顿时做了什么选择——永远不离开你的设备。</p>
+
+  <div class="box">
+    <p><strong>一句话版本。</strong>你的记录只存在你的 iPhone 上。产品分析和崩溃上报默认都是关闭的，你不开就不收集，开了也随时可以关。我们不会上传你设置的 App 名称，不追踪你，不使用广告标识符，也不出售数据。</p>
+  </div>
+
+  <h2>只存在你设备上的内容</h2>
+  <ul>
+    <li>你设置了哪些 App</li>
+    <li>每一次停顿：发生的时间，以及你选择了离开还是继续</li>
+    <li>你的设置和偏好</li>
+  </ul>
+  <p>这些都不会上传给我们。删除 App 即一并删除。</p>
+
+  <h2>仅在你同意后才收集的内容</h2>
+  <p>Tivon 有两个相互独立的开关，默认都关闭。你开启之前不会发送任何数据；开启其中一个不会连带开启另一个。</p>
+
+  <p><strong>产品分析</strong>——帮我们了解 App 的哪些部分真正有用。开启后会发送少量事件（例如你完成了设置），并附带 App 版本与构建号、iOS 版本、设备型号，以及一个随机生成的匿名标识符。事件中不包含任何你设置的 App 名称。</p>
+
+  <p><strong>崩溃上报</strong>——帮我们修复崩溃。开启后，崩溃发生时会发送崩溃类型、错误信息、各线程的调用栈、已加载的二进制列表，以及基本的 App 与设备信息。同时会发送 App 的打开次数和使用时长，这是计算崩溃率所必需的。截图、视图层级和交互轨迹均已关闭。</p>
+
+  <h2>我们从不收集的内容</h2>
+  <ul>
+    <li>你设置的 App 的名称或标识</li>
+    <li>你的姓名、邮箱或联系方式</li>
+    <li>位置、通讯录、照片、健康数据、浏览或搜索记录</li>
+    <li>广告标识符（IDFA / IDFV），以及任何跨 App、跨网站的追踪</li>
+  </ul>
+
+  <h2>撤回同意</h2>
+  <p>打开 Tivon 的设置，关掉对应的开关即可。相应服务会立即停止，设备上尚未发送的数据会被删除。已经开始上传的数据无法撤回。</p>
+
+  <h2>谁在处理这些数据</h2>
+  <p>产品分析由 PostHog 处理，崩溃上报由 Sentry 处理，两者的服务器均位于欧盟，并作为受托方按我们的指示处理数据。两边的服务端 IP 地址存储均已关闭。</p>
+
+  <h2>关于购买</h2>
+  <p>订阅完全由 Apple 处理，我们不会接触你的支付信息。管理或取消订阅请在「设置」App 中你的 Apple 账户下操作。</p>
+
+  <h2>关于年龄</h2>
+  <p>Tivon 面向成年人，不以儿童为对象。我们不会有意收集未达到所在国家或地区数字同意年龄的人的数据——部分欧盟国家为 16 岁，其他不少地区为 13 岁。由于两个开关默认都关闭，不主动开启就不会收集任何数据；关掉之后，设备上尚未发送的数据也会被删除。</p>
+
+  <h2>你的权利</h2>
+  <p>由于分析和崩溃数据不含任何我们能关联到你本人的标识，我们通常无法在收到请求时定位到「你的」数据。你可以随时用上面的开关停止全部收集，卸载 App 即可删除本地保存的全部内容。对本政策有任何疑问，欢迎来信。</p>
+
+  <h2>政策变更</h2>
+  <p>如果本政策的变更影响到所收集的内容，我们会更新本页和顶部日期，并在必要时重新征求你的同意。</p>
+
+  <h2>联系我们</h2>
+  <p><a href="mailto:sgbusiness046@gmail.com">sgbusiness046@gmail.com</a></p>
+</section>
+
+<!-- 繁體中文 -->
+<section data-i18n="tw">
+  <h1>隱私權政策</h1>
+  <p class="updated">最後更新：2026 年 9 月 17 日</p>
+
+  <p class="lead">Tivon 的設計原則是：最敏感的那部分資料——你設定了哪些 App、你在停頓時做了什麼選擇——永遠不離開你的裝置。</p>
+
+  <div class="box">
+    <p><strong>一句話版本。</strong>你的記錄只存在你的 iPhone 上。產品分析與當機回報預設都是關閉的，你不開啟就不會收集，開啟後也隨時可以關掉。我們不會上傳你設定的 App 名稱，不追蹤你，不使用廣告識別碼，也不出售資料。</p>
+  </div>
+
+  <h2>只存在你裝置上的內容</h2>
+  <ul>
+    <li>你設定了哪些 App</li>
+    <li>每一次停頓：發生的時間，以及你選擇離開還是繼續</li>
+    <li>你的設定與偏好</li>
+  </ul>
+  <p>這些都不會上傳給我們。刪除 App 即一併刪除。</p>
+
+  <h2>僅在你同意後才收集的內容</h2>
+  <p>Tivon 有兩個各自獨立的開關，預設都關閉。你開啟之前不會傳送任何資料；開啟其中一個不會連帶開啟另一個。</p>
+
+  <p><strong>產品分析</strong>——幫我們了解 App 的哪些部分真正有用。開啟後會傳送少量事件（例如你完成了設定），並附帶 App 版本與 build 號、iOS 版本、裝置型號，以及一個隨機產生的匿名識別碼。事件中不包含任何你設定的 App 名稱。</p>
+
+  <p><strong>當機回報</strong>——幫我們修復當機。開啟後，當機發生時會傳送當機類型、錯誤訊息、各執行緒的呼叫堆疊、已載入的二進位列表，以及基本的 App 與裝置資訊。同時會傳送 App 的開啟次數與使用時長，這是計算當機率所必需的。螢幕截圖、視圖層級與互動軌跡均已關閉。</p>
+
+  <h2>我們從不收集的內容</h2>
+  <ul>
+    <li>你設定的 App 的名稱或識別碼</li>
+    <li>你的姓名、電子郵件或聯絡方式</li>
+    <li>位置、聯絡人、照片、健康資料、瀏覽或搜尋記錄</li>
+    <li>廣告識別碼（IDFA / IDFV），以及任何跨 App、跨網站的追蹤</li>
+  </ul>
+
+  <h2>撤回同意</h2>
+  <p>開啟 Tivon 的設定，關掉對應的開關即可。相應服務會立即停止，裝置上尚未送出的資料會被刪除。已經開始上傳的資料無法收回。</p>
+
+  <h2>誰在處理這些資料</h2>
+  <p>產品分析由 PostHog 處理，當機回報由 Sentry 處理，兩者的伺服器皆位於歐盟，並作為受託方依我們的指示處理資料。兩邊的伺服器端 IP 位址儲存均已關閉。</p>
+
+  <h2>關於購買</h2>
+  <p>訂閱完全由 Apple 處理，我們不會接觸你的付款資訊。管理或取消訂閱請在「設定」App 中你的 Apple 帳戶下操作。</p>
+
+  <h2>關於年齡</h2>
+  <p>Tivon 面向成年人，不以兒童為對象。我們不會有意收集未達到所在國家或地區數位同意年齡的人的資料——部分歐盟國家為 16 歲，其他不少地區為 13 歲。由於兩個開關預設都關閉，不主動開啟就不會收集任何資料；關掉之後，裝置上尚未送出的資料也會被刪除。</p>
+
+  <h2>你的權利</h2>
+  <p>由於分析與當機資料不含任何我們能關聯到你本人的識別碼，我們通常無法在收到請求時定位到「你的」資料。你可以隨時用上面的開關停止全部收集，移除 App 即可刪除本機保存的全部內容。對本政策有任何疑問，歡迎來信。</p>
+
+  <h2>政策變更</h2>
+  <p>如果本政策的變更影響到所收集的內容，我們會更新本頁與頂部日期，並在必要時重新徵求你的同意。</p>
+
+  <h2>聯絡我們</h2>
+  <p><a href="mailto:sgbusiness046@gmail.com">sgbusiness046@gmail.com</a></p>
+</section>
+
+<footer>
+  <a href="index.html"><span data-i18n="en" class="on">Support</span><span data-i18n="zh">支持</span><span data-i18n="tw">支援</span></a>
+  <span data-i18n="en" class="on">© 2026 Tivon</span>
+  <span data-i18n="zh">© 2026 Tivon</span>
+  <span data-i18n="tw">© 2026 Tivon</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var buttons = document.querySelectorAll('nav button');
+  function set(lang){
+    document.documentElement.setAttribute('lang', lang==='en'?'en':(lang==='zh'?'zh-Hans':'zh-Hant'));
+    document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      el.classList.toggle('on', el.getAttribute('data-i18n')===lang);
+    });
+    buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-set')===lang)); });
+  }
+  buttons.forEach(function(b){ b.addEventListener('click', function(){ set(b.getAttribute('data-set')); }); });
+  var nav = (navigator.language||'en').toLowerCase();
+  if(nav.indexOf('zh')===0){ set(/hant|tw|hk|mo/.test(nav) ? 'tw' : 'zh'); }
+})();
+</script>
+</body>
+</html>

@@ -61,12 +61,12 @@
 <!-- ENGLISH -->
 <section data-i18n="en" class="on">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 19 September 2026</p>
+  <p class="updated">Last updated: 21 September 2026</p>
 
   <p class="lead">Tivon is built so that the most sensitive part — which apps you set up — never leaves your device.</p>
 
   <div class="box">
-    <p><strong>The short version.</strong> Your pause history stays on your iPhone. Analytics and crash reporting are both off until you turn them on, and you can turn them off again at any time. We never send the names of the apps you set up. We don’t track you, don’t use advertising identifiers, and don’t sell data.</p>
+    <p><strong>The short version.</strong> Your pause history stays on your iPhone. Analytics and crash reporting share one switch. If your App Store region is in the EU / EEA, the UK or Switzerland, it is off until you agree; elsewhere it is on, Tivon tells you so when you first open it, and you can turn it off right there. Either way you can turn it off at any time. We never send the names of the apps you set up. We don’t track you, don’t use advertising identifiers, and don’t sell data.</p>
   </div>
 
   <h2>What stays on your device</h2>
@@ -75,23 +75,29 @@
     <li>Your pause history: which app each pause was for, when it happened, whether you left or continued, and any answer you gave</li>
     <li>Your settings and preferences</li>
   </ul>
-  <p>This history is not uploaded to us, and deleting the app removes it. If you turn on product analytics, Tivon also sends a separate event for each pause (see below); it never says which app the pause was for.</p>
+  <p>This history is not uploaded to us, and deleting the app removes it. While analytics is on, Tivon also sends a separate event for each pause (see below). It never names the app the pause was for; if that app is in Tivon’s built-in list, it says which category the app is in, such as social or video.</p>
 
-  <h2>What we only collect with your consent</h2>
-  <p>Tivon has two separate switches, both off by default. Nothing is sent before you turn one on, and turning one on does not turn on the other.</p>
+  <h2>Analytics and crash reports</h2>
+  <p>One switch, in Settings → Analytics &amp; crash reports, controls both. Whether it starts on or off depends on the region of your App Store account, which Tivon checks once, the first time you open it:</p>
+  <ul>
+    <li><strong>EU / EEA, the UK and Switzerland</strong>: off. When you first open Tivon, it asks. Nothing is sent unless you agree.</li>
+    <li><strong>Everywhere else</strong>: on. When you first open Tivon, it shows what is collected, with the switch on, and you can turn it off right there. Nothing is sent before you have seen that screen.</li>
+    <li>If Tivon cannot tell your App Store region, it uses your device’s region; if it cannot tell that either, it treats you as in the first group.</li>
+  </ul>
+  <p>Tivon keeps the result of that first check and does not change it later, and once you have set the switch yourself, your choice always wins. Tivon stores only which of the two groups applies, not your country, and does not send it.</p>
 
   <p><strong>Product analytics</strong> — helps us see which parts of the app work. When on, we send events about how Tivon is used, for example that you completed setup, that a pause appeared and how you responded to it, or that you viewed the subscription page or started a subscription. Depending on the event, it can include:</p>
   <ul>
     <li>For a pause: whether you left or continued, how long you took to choose, the time of day (one of five periods, such as morning), and the pause style shown</li>
-    <li>For setup and automations: how many apps you have set up, never which ones</li>
+    <li>For setup and automations: how many apps you have set up and how far you got in the setup guide; for an app in Tivon’s built-in list, its category (such as social or video). Never the app’s name or anything you typed</li>
     <li>For purchases: the Tivon subscription product (monthly or annual), never prices or payment details</li>
   </ul>
-  <p>Every event also carries your app version and build, iOS version, device model and type, the language Tivon is shown in, your plan (Free or Pro), the calendar week (for example 2026-W38), the exact time of the event, a session ID, random numbers that tie related events together (for example, one per pause), and a randomly generated anonymous identifier, plus technical details such as the version of the consent text you agreed to and the version of the analytics library. Events never contain the name or identifier of any app you set up.</p>
+  <p>Every event also carries your app version and build, iOS version, device model and type, the language Tivon is shown in, your plan (Free or Pro), the calendar week (for example 2026-W38), the exact time of the event, a session ID, random numbers that tie related events together (for example, one per pause), and a randomly generated anonymous identifier, plus technical details such as the version of the consent text you agreed to and the version of the analytics library. Events never contain the name or identifier of any app you set up, or the text you entered for it in Shortcuts.</p>
 
   <p><strong>Crash reports</strong> — helps us fix crashes. When on, a crash sends the crash type, the error message, the stack of each thread, the list of loaded binaries, and basic app and device information. It also sends how often the app is opened and for how long, with a random installation ID used to count them, which is what makes it possible to calculate a crash rate. Screenshots, view hierarchies and interaction trails are switched off.</p>
 
   <h2>The two random identifiers</h2>
-  <p>Product analytics uses a randomly generated anonymous identifier, and crash reporting uses a separate random installation ID. Both are created on your device, contain no personal information, and are not linked to your name, email or Apple Account. Each is deleted from your device when you switch the corresponding option off.</p>
+  <p>Product analytics uses a randomly generated anonymous identifier, and crash reporting uses a separate random installation ID. Both are created on your device, contain no personal information, and are not linked to your name, email or Apple Account. Both are deleted from your device when you switch analytics off.</p>
 
   <h2>What we never collect</h2>
   <ul>
@@ -101,20 +107,20 @@
     <li>Advertising identifiers (IDFA / IDFV), or any cross-app or cross-site tracking</li>
   </ul>
 
-  <h2>Withdrawing consent</h2>
-  <p>Open Tivon’s settings and switch off either option. The corresponding service stops immediately and anything still queued on your device is deleted. Data that has already begun uploading cannot be recalled.</p>
+  <h2>Turning it off</h2>
+  <p>Open Tivon’s settings and switch off Analytics &amp; crash reports. Both services stop immediately and anything still queued on your device is deleted. Nothing that happens while it is off is sent later. Data that has already begun uploading cannot be recalled.</p>
 
   <h2>Who processes the data</h2>
-  <p>Analytics is processed by PostHog and crash reports by Sentry, both on servers in the European Union, as processors acting on our instructions. We don’t want either service to keep your IP address: the app asks PostHog not to look up a location from it and sets Sentry not to record it, and our intent is for both projects to discard IP addresses. As with any internet request, the connection itself still reaches their servers from your IP address.</p>
+  <p>Analytics is processed by PostHog, Inc. on servers in the United States, and crash reports by Sentry (Functional Software, Inc.) on servers in the European Union (Germany), both as processors acting on our instructions. Using PostHog means analytics data is transferred to the United States. We don’t want either service to keep your IP address: the app asks PostHog not to look up a location from it and sets Sentry not to record it, and both projects are set to discard IP addresses. As with any internet request, the connection itself still reaches their servers from your IP address.</p>
 
   <h2>Purchases</h2>
   <p>Subscriptions are handled entirely by Apple. We never see your payment details. If product analytics is on, we also receive the purchase events described above, which include the subscription product (monthly or annual). Manage or cancel a subscription in the Settings app under your Apple Account.</p>
 
   <h2>Age</h2>
-  <p>Tivon is made for adults and is not directed at children. We don’t knowingly collect data from anyone below the age of digital consent where they live — 16 in parts of the EU, 13 in many other places. Because both switches are off by default, nothing is collected unless someone turns one on, and switching it back off deletes whatever is still on the device.</p>
+  <p>Tivon is made for adults and is not directed at children. We don’t knowingly collect data from anyone below the age of digital consent where they live — 16 in parts of the EU, 13 in many other places. Where analytics starts on, the first screen says so and it can be switched off right there; switching it off stops collection and deletes whatever is still on the device.</p>
 
   <h2>Your rights</h2>
-  <p>Because the identifiers described above are random, are not linked to your name, email or account, and are never shown to you in Tivon, we usually cannot locate “your” data on request. You can stop all collection at any time with the switches above, and delete everything held locally by removing the app. For any question about this policy, email us.</p>
+  <p>Because the identifiers described above are random, are not linked to your name, email or account, and are never shown to you in Tivon, we usually cannot locate “your” data on request. You can stop all collection at any time with the switch above, and delete everything held locally by removing the app. For any question about this policy, email us.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes in a way that affects what is collected, we will update this page and the date at the top, and ask for consent again where required.</p>
@@ -126,12 +132,12 @@
 <!-- 简体中文 -->
 <section data-i18n="zh">
   <h1>隐私政策</h1>
-  <p class="updated">最后更新：2026 年 9 月 19 日</p>
+  <p class="updated">最后更新：2026 年 9 月 21 日</p>
 
   <p class="lead">Tivon 的设计原则是：最敏感的那部分数据——你设置了哪些 App——永远不离开你的设备。</p>
 
   <div class="box">
-    <p><strong>一句话版本。</strong>你的停顿记录只存在你的 iPhone 上。产品分析和崩溃上报默认都是关闭的，你不开就不收集，开了也随时可以关。我们不会上传你设置的 App 名称，不追踪你，不使用广告标识符，也不出售数据。</p>
+    <p><strong>一句话版本。</strong>你的停顿记录只存在你的 iPhone 上。产品分析和崩溃上报共用一个开关。如果你的 App Store 地区在欧盟 / 欧洲经济区、英国或瑞士，它默认关闭，你同意之后才开始；在其他地区它默认开启，你第一次打开 Tivon 时会看到说明，可以当场关掉。无论在哪里，都可以随时关闭。我们不会上传你设置的 App 名称，不追踪你，不使用广告标识符，也不出售数据。</p>
   </div>
 
   <h2>只存在你设备上的内容</h2>
@@ -140,23 +146,29 @@
     <li>你的停顿记录：每次停顿对应的 App、发生的时间、你选择了离开还是继续，以及你给出的回答</li>
     <li>你的设置和偏好</li>
   </ul>
-  <p>这些记录不会上传给我们，删除 App 即一并删除。如果你开启了产品分析，Tivon 还会为每次停顿另外发送一个事件（见下文），其中从不包含这次停顿对应的是哪个 App。</p>
+  <p>这些记录不会上传给我们，删除 App 即一并删除。产品分析开着时，Tivon 还会为每次停顿另外发送一个事件（见下文）。其中从不包含这次停顿对应的 App 名称；如果那个 App 在 Tivon 内置的 App 目录里，会带上它的类别，例如社交或视频。</p>
 
-  <h2>仅在你同意后才收集的内容</h2>
-  <p>Tivon 有两个相互独立的开关，默认都关闭。你开启之前不会发送任何数据；开启其中一个不会连带开启另一个。</p>
+  <h2>产品分析与崩溃上报</h2>
+  <p>两者由同一个开关控制，位置在 设置 → 分析与崩溃报告。它默认开还是关，取决于你的 App Store 账户所在地区；Tivon 只在你第一次打开时判断一次：</p>
+  <ul>
+    <li><strong>欧盟 / 欧洲经济区、英国、瑞士</strong>：默认关闭。第一次打开 Tivon 时会征求你的同意，你不同意就不发送任何数据。</li>
+    <li><strong>其他地区</strong>：默认开启。第一次打开 Tivon 时会说明收集哪些内容，开关是开着的，你可以当场关掉。看到这一页之前不会发送任何数据。</li>
+    <li>如果 Tivon 判断不出你的 App Store 地区，就改看设备的地区设置；两者都判断不出时，按第一种处理。</li>
+  </ul>
+  <p>第一次判断的结果会保存下来，之后不会再变；你自己改过开关以后，一律以你的选择为准。Tivon 只保存适用哪一种，不保存你的国家，也不会发送它。</p>
 
   <p><strong>产品分析</strong>——帮我们了解 App 的哪些部分真正有用。开启后会发送 Tivon 的使用事件，例如你完成了设置、出现了一次停顿以及你对它的回应，或你查看了订阅页、开始了订阅。视事件不同，可能包含：</p>
   <ul>
     <li>停顿：你离开还是继续、做出选择用了多久、所在时段（一天分为五段，例如上午）、显示的停顿形态</li>
-    <li>设置与自动化：你设置了几个 App，从不包含是哪些</li>
+    <li>设置与自动化：你设置了几个 App、在设置指南里走到了第几步；如果 App 在 Tivon 内置的目录里，还有它的类别（例如社交、视频）。从不包含 App 名称或你输入的文字</li>
     <li>购买：Tivon 的订阅产品（月度或年度），从不包含价格或支付信息</li>
   </ul>
-  <p>每个事件还会附带 App 版本与构建号、iOS 版本、设备型号与类型、Tivon 显示的语言、你的方案（免费版或 Pro）、所在周（例如 2026-W38）、事件发生的准确时间、会话 ID、把相关事件串起来的随机编号（例如每次停顿一个），以及一个随机生成的匿名标识符；另有你同意时看到的同意页版本、分析组件的版本等技术信息。事件中不包含任何你设置的 App 的名称或标识。</p>
+  <p>每个事件还会附带 App 版本与构建号、iOS 版本、设备型号与类型、Tivon 显示的语言、你的方案（免费版或 Pro）、所在周（例如 2026-W38）、事件发生的准确时间、会话 ID、把相关事件串起来的随机编号（例如每次停顿一个），以及一个随机生成的匿名标识符；另有你同意时看到的同意页版本、分析组件的版本等技术信息。事件中不包含任何你设置的 App 的名称或标识，也不包含你在快捷指令里为它输入的文字。</p>
 
   <p><strong>崩溃上报</strong>——帮我们修复崩溃。开启后，崩溃发生时会发送崩溃类型、错误信息、各线程的调用栈、已加载的二进制列表，以及基本的 App 与设备信息。同时会发送 App 的打开次数和使用时长，以及一个用于统计这些次数的随机安装 ID，这是计算崩溃率所必需的。截图、视图层级和交互轨迹均已关闭。</p>
 
   <h2>两个随机标识符</h2>
-  <p>产品分析使用一个随机生成的匿名标识符，崩溃上报使用另一个随机安装 ID。两者都在你的设备上生成，不含个人信息，也不与你的姓名、邮箱或 Apple 账户关联。关掉对应的开关时，相应的标识符会从你的设备上删除。</p>
+  <p>产品分析使用一个随机生成的匿名标识符，崩溃上报使用另一个随机安装 ID。两者都在你的设备上生成，不含个人信息，也不与你的姓名、邮箱或 Apple 账户关联。关掉分析开关时，两者都会从你的设备上删除。</p>
 
   <h2>我们从不收集的内容</h2>
   <ul>
@@ -166,17 +178,17 @@
     <li>广告标识符（IDFA / IDFV），以及任何跨 App、跨网站的追踪</li>
   </ul>
 
-  <h2>撤回同意</h2>
-  <p>打开 Tivon 的设置，关掉对应的开关即可。相应服务会立即停止，设备上尚未发送的数据会被删除。已经开始上传的数据无法撤回。</p>
+  <h2>关闭</h2>
+  <p>打开 Tivon 的设置，关掉「分析与崩溃报告」即可。两项服务都会立即停止，设备上尚未发送的数据会被删除；关闭期间发生的事情以后也不会补发。已经开始上传的数据无法撤回。</p>
 
   <h2>谁在处理这些数据</h2>
-  <p>产品分析由 PostHog 处理，崩溃上报由 Sentry 处理，两者的服务器均位于欧盟，并作为受托方按我们的指示处理数据。我们不希望任何一方保留你的 IP 地址：App 会要求 PostHog 不根据 IP 推断位置，并设置 Sentry 不记录 IP；我们的意图是让两边的项目都丢弃 IP 地址。和任何网络请求一样，连接本身仍会从你的 IP 地址到达它们的服务器。</p>
+  <p>产品分析由 PostHog, Inc. 处理，服务器位于美国；崩溃上报由 Sentry（Functional Software, Inc.）处理，服务器位于欧盟（德国）。两者都作为受托方按我们的指示处理数据。使用 PostHog 意味着产品分析数据会被传输到美国。我们不希望任何一方保留你的 IP 地址：App 会要求 PostHog 不根据 IP 推断位置，并设置 Sentry 不记录 IP；两边的项目都已设置为丢弃 IP 地址。和任何网络请求一样，连接本身仍会从你的 IP 地址到达它们的服务器。</p>
 
   <h2>关于购买</h2>
   <p>订阅完全由 Apple 处理，我们不会接触你的支付信息。如果你开启了产品分析，我们还会收到上文所述的购买事件，其中包含订阅产品（月度或年度）。管理或取消订阅请在“设置”App 中你的 Apple 账户下操作。</p>
 
   <h2>关于年龄</h2>
-  <p>Tivon 面向成年人，不以儿童为对象。我们不会有意收集未达到所在国家或地区数字同意年龄的人的数据——部分欧盟国家为 16 岁，其他不少地区为 13 岁。由于两个开关默认都关闭，不主动开启就不会收集任何数据；关掉之后，设备上尚未发送的数据也会被删除。</p>
+  <p>Tivon 面向成年人，不以儿童为对象。我们不会有意收集未达到所在国家或地区数字同意年龄的人的数据——部分欧盟国家为 16 岁，其他不少地区为 13 岁。在默认开启的地区，第一页就会说明这一点，并且可以当场关掉；关掉之后即停止收集，设备上尚未发送的数据也会被删除。</p>
 
   <h2>你的权利</h2>
   <p>由于上文所述的标识符都是随机的，不与你的姓名、邮箱或账户关联，Tivon 也不会向你显示它们，我们通常无法在收到请求时定位到“你的”数据。你可以随时用上面的开关停止全部收集，卸载 App 即可删除本地保存的全部内容。对本政策有任何疑问，欢迎来信。</p>
@@ -191,12 +203,12 @@
 <!-- 繁體中文 -->
 <section data-i18n="tw">
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新：2026 年 9 月 19 日</p>
+  <p class="updated">最後更新：2026 年 9 月 21 日</p>
 
   <p class="lead">Tivon 的設計原則是：最敏感的那部分資料——你設定了哪些 App——永遠不離開你的裝置。</p>
 
   <div class="box">
-    <p><strong>一句話版本。</strong>你的停頓記錄只存在你的 iPhone 上。產品分析與當機回報預設都是關閉的，你不開啟就不會收集，開啟後也隨時可以關掉。我們不會上傳你設定的 App 名稱，不追蹤你，不使用廣告識別碼，也不出售資料。</p>
+    <p><strong>一句話版本。</strong>你的停頓記錄只存在你的 iPhone 上。產品分析與當機回報共用一個開關。如果你的 App Store 地區在歐盟 / 歐洲經濟區、英國或瑞士，它預設關閉，你同意之後才開始；在其他地區它預設開啟，你第一次開啟 Tivon 時會看到說明，可以當場關掉。無論在哪裡，都可以隨時關閉。我們不會上傳你設定的 App 名稱，不追蹤你，不使用廣告識別碼，也不出售資料。</p>
   </div>
 
   <h2>只存在你裝置上的內容</h2>
@@ -205,23 +217,29 @@
     <li>你的停頓記錄：每次停頓對應的 App、發生的時間、你選擇離開還是繼續，以及你給出的回答</li>
     <li>你的設定與偏好</li>
   </ul>
-  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。如果你開啟了產品分析，Tivon 還會為每次停頓另外傳送一個事件（見下文），其中從不包含這次停頓對應的是哪個 App。</p>
+  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。產品分析開著時，Tivon 還會為每次停頓另外傳送一個事件（見下文）。其中從不包含這次停頓對應的 App 名稱；如果那個 App 在 Tivon 內建的 App 目錄裡，會帶上它的類別，例如社群或影音。</p>
 
-  <h2>僅在你同意後才收集的內容</h2>
-  <p>Tivon 有兩個各自獨立的開關，預設都關閉。你開啟之前不會傳送任何資料；開啟其中一個不會連帶開啟另一個。</p>
+  <h2>產品分析與當機回報</h2>
+  <p>兩者由同一個開關控制，位置在 設定 → 分析與當機報告。它預設開還是關，取決於你的 App Store 帳號所在地區；Tivon 只在你第一次開啟時判斷一次：</p>
+  <ul>
+    <li><strong>歐盟 / 歐洲經濟區、英國、瑞士</strong>：預設關閉。第一次開啟 Tivon 時會徵求你的同意，你不同意就不傳送任何資料。</li>
+    <li><strong>其他地區</strong>：預設開啟。第一次開啟 Tivon 時會說明收集哪些內容，開關是開著的，你可以當場關掉。看到這一頁之前不會傳送任何資料。</li>
+    <li>如果 Tivon 判斷不出你的 App Store 地區，就改看裝置的地區設定；兩者都判斷不出時，按第一種處理。</li>
+  </ul>
+  <p>第一次判斷的結果會保存下來，之後不會再變；你自己改過開關以後，一律以你的選擇為準。Tivon 只保存適用哪一種，不保存你的國家，也不會傳送它。</p>
 
   <p><strong>產品分析</strong>——幫我們了解 App 的哪些部分真正有用。開啟後會傳送 Tivon 的使用事件，例如你完成了設定、出現了一次停頓以及你對它的回應，或你查看了訂閱頁、開始了訂閱。視事件不同，可能包含：</p>
   <ul>
     <li>停頓：你離開還是繼續、做出選擇用了多久、所在時段（一天分為五段，例如上午）、顯示的停頓形態</li>
-    <li>設定與自動化：你設定了幾個 App，從不包含是哪些</li>
+    <li>設定與自動化：你設定了幾個 App、在設定指南裡走到了第幾步；如果 App 在 Tivon 內建的目錄裡，還有它的類別（例如社群、影音）。從不包含 App 名稱或你輸入的文字</li>
     <li>購買：Tivon 的訂閱產品（月訂閱或年訂閱），從不包含價格或付款資訊</li>
   </ul>
-  <p>每個事件還會附帶 App 版本與 build 號、iOS 版本、裝置型號與類型、Tivon 顯示的語言、你的方案（免費版或 Pro）、所在週（例如 2026-W38）、事件發生的準確時間、工作階段 ID、把相關事件串起來的隨機編號（例如每次停頓一個），以及一個隨機產生的匿名識別碼；另有你同意時看到的同意頁版本、分析元件的版本等技術資訊。事件中不包含任何你設定的 App 的名稱或識別碼。</p>
+  <p>每個事件還會附帶 App 版本與 build 號、iOS 版本、裝置型號與類型、Tivon 顯示的語言、你的方案（免費版或 Pro）、所在週（例如 2026-W38）、事件發生的準確時間、工作階段 ID、把相關事件串起來的隨機編號（例如每次停頓一個），以及一個隨機產生的匿名識別碼；另有你同意時看到的同意頁版本、分析元件的版本等技術資訊。事件中不包含任何你設定的 App 的名稱或識別碼，也不包含你在捷徑裡為它輸入的文字。</p>
 
   <p><strong>當機回報</strong>——幫我們修復當機。開啟後，當機發生時會傳送當機類型、錯誤訊息、各執行緒的呼叫堆疊、已載入的二進位列表，以及基本的 App 與裝置資訊。同時會傳送 App 的開啟次數與使用時長，以及一個用於統計這些次數的隨機安裝 ID，這是計算當機率所必需的。螢幕截圖、視圖層級與互動軌跡均已關閉。</p>
 
   <h2>兩個隨機識別碼</h2>
-  <p>產品分析使用一個隨機產生的匿名識別碼，當機回報使用另一個隨機安裝 ID。兩者都在你的裝置上產生，不含個人資訊，也不與你的姓名、電子郵件或 Apple 帳號關聯。關掉對應的開關時，相應的識別碼會從你的裝置上刪除。</p>
+  <p>產品分析使用一個隨機產生的匿名識別碼，當機回報使用另一個隨機安裝 ID。兩者都在你的裝置上產生，不含個人資訊，也不與你的姓名、電子郵件或 Apple 帳號關聯。關掉分析開關時，兩者都會從你的裝置上刪除。</p>
 
   <h2>我們從不收集的內容</h2>
   <ul>
@@ -231,17 +249,17 @@
     <li>廣告識別碼（IDFA / IDFV），以及任何跨 App、跨網站的追蹤</li>
   </ul>
 
-  <h2>撤回同意</h2>
-  <p>開啟 Tivon 的設定，關掉對應的開關即可。相應服務會立即停止，裝置上尚未送出的資料會被刪除。已經開始上傳的資料無法收回。</p>
+  <h2>關閉</h2>
+  <p>開啟 Tivon 的設定，關掉「分析與當機報告」即可。兩項服務都會立即停止，裝置上尚未送出的資料會被刪除；關閉期間發生的事情以後也不會補傳。已經開始上傳的資料無法收回。</p>
 
   <h2>誰在處理這些資料</h2>
-  <p>產品分析由 PostHog 處理，當機回報由 Sentry 處理，兩者的伺服器皆位於歐盟，並作為受託方依我們的指示處理資料。我們不希望任何一方保留你的 IP 位址：App 會要求 PostHog 不根據 IP 推斷位置，並設定 Sentry 不記錄 IP；我們的意圖是讓兩邊的專案都捨棄 IP 位址。和任何網路請求一樣，連線本身仍會從你的 IP 位址到達它們的伺服器。</p>
+  <p>產品分析由 PostHog, Inc. 處理，伺服器位於美國；當機回報由 Sentry（Functional Software, Inc.）處理，伺服器位於歐盟（德國）。兩者都作為受託方依我們的指示處理資料。使用 PostHog 代表產品分析資料會被傳輸到美國。我們不希望任何一方保留你的 IP 位址：App 會要求 PostHog 不根據 IP 推斷位置，並設定 Sentry 不記錄 IP；兩邊的專案都已設定為捨棄 IP 位址。和任何網路請求一樣，連線本身仍會從你的 IP 位址到達它們的伺服器。</p>
 
   <h2>關於購買</h2>
   <p>訂閱完全由 Apple 處理，我們不會接觸你的付款資訊。如果你開啟了產品分析，我們還會收到上文所述的購買事件，其中包含訂閱產品（月訂閱或年訂閱）。管理或取消訂閱請在「設定」App 中你的 Apple 帳號下操作。</p>
 
   <h2>關於年齡</h2>
-  <p>Tivon 面向成年人，不以兒童為對象。我們不會有意收集未達到所在國家或地區數位同意年齡的人的資料——部分歐盟國家為 16 歲，其他不少地區為 13 歲。由於兩個開關預設都關閉，不主動開啟就不會收集任何資料；關掉之後，裝置上尚未送出的資料也會被刪除。</p>
+  <p>Tivon 面向成年人，不以兒童為對象。我們不會有意收集未達到所在國家或地區數位同意年齡的人的資料——部分歐盟國家為 16 歲，其他不少地區為 13 歲。在預設開啟的地區，第一頁就會說明這一點，並且可以當場關掉；關掉之後即停止收集，裝置上尚未送出的資料也會被刪除。</p>
 
   <h2>你的權利</h2>
   <p>由於上文所述的識別碼都是隨機的，不與你的姓名、電子郵件或帳號關聯，Tivon 也不會向你顯示它們，我們通常無法在收到請求時定位到「你的」資料。你可以隨時用上面的開關停止全部收集，移除 App 即可刪除本機保存的全部內容。對本政策有任何疑問，歡迎來信。</p>

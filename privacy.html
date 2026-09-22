@@ -81,7 +81,7 @@
   <p>One switch, in Settings → Analytics &amp; crash reports, controls both. Whether it starts on or off depends on the region of your App Store account, which Tivon checks once, the first time you open it:</p>
   <ul>
     <li><strong>EU / EEA, the UK, Switzerland, South Korea and Brazil</strong>: off. When you first open Tivon, it asks. Nothing is sent unless you agree. Here we rely on your consent, which you can withdraw at any time.</li>
-    <li><strong>Everywhere else</strong>: on. When you first open Tivon, it shows what is collected, with the switch on, and you can turn it off right there. Nothing is sent before you have seen that screen.</li>
+    <li><strong>Everywhere else</strong>: on. When you first open Tivon, it shows what is collected, with the switch on, and you can turn it off right there. Nothing is sent until you leave that screen, so you can switch it off before anything is collected.</li>
     <li>If Tivon cannot tell your App Store region, it treats you as in the first group.</li>
   </ul>
   <p>Tivon keeps the result of that first check and does not change it later, and once you have set the switch yourself, your choice always wins. Tivon stores only which of the two groups applies, not your country, and does not send it.</p>
@@ -97,7 +97,7 @@
   <p><strong>Crash reports</strong> — helps us fix crashes. When on, a crash sends the crash type, the error message, the stack of each thread, the list of loaded binaries, and basic app and device information. It also sends how often the app is opened and for how long, with a random installation ID used to count them, which is what makes it possible to calculate a crash rate. Screenshots, view hierarchies and interaction trails are switched off.</p>
 
   <h2>The two random identifiers</h2>
-  <p>Product analytics uses a random identifier, and crash reporting uses a separate random installation ID. Both are created on your device and are not linked to your name, email or Apple Account. Because they stay the same over time, data protection law treats them, and the events that carry them, as pseudonymous personal data, and so do we. Tivon shows the analytics identifier in Settings → Analytics &amp; crash reports so that you can use it to exercise your rights (see below). When you switch analytics off, the crash reporting ID is deleted from your device. The analytics identifier stays in Settings, marked as no longer sent, only so that you can still ask us to delete your data; it is removed when you delete the app.</p>
+  <p>Product analytics uses a random identifier, and crash reporting uses a separate random installation ID. Both are created on your device and are not linked to your name, email or Apple Account. Because they stay the same over time, data protection law treats them, and the events that carry them, as pseudonymous personal data, and so do we. Tivon shows the analytics identifier in Settings → Analytics &amp; crash reports so that you can use it to exercise your rights (see below). When you switch analytics off, the crash reporting ID is deleted from your device. The analytics identifier stays in Settings, marked as no longer sent, only so that you can still ask us to delete your data; it is removed when you delete the app. If you switch analytics back on, Tivon uses that same identifier again rather than creating a new one, so all your data stays under one identifier you can ask us to delete.</p>
 
   <h2>What we never collect</h2>
   <ul>
@@ -115,8 +115,8 @@
 
   <h2>Our legal basis</h2>
   <p>Where analytics is off until you agree — the EU / EEA, the UK, Switzerland, South Korea and Brazil — our basis is your consent (Article 6(1)(a) GDPR, and the equivalent under the UK GDPR, Korea’s PIPA and Brazil’s LGPD). You can withdraw it at any time in Settings; withdrawing does not make what was processed beforehand unlawful.</p>
-  <p>Where analytics starts on, our basis is our legitimate interest in seeing which parts of Tivon are used and in keeping the app from crashing (Article 6(1)(f) GDPR). We have weighed that against your privacy: the events never carry the names of the apps you set up or anything you typed, they are tied to a random identifier rather than an account, you are told on the first screen, and you can switch it off there and at any time afterwards. You can object to this processing — switching it off is the quickest way.</p>
-  <p>If you email us, we use your address and what you write to answer you, on the same legitimate-interest basis.</p>
+  <p>Where analytics starts on, we rely on the notice-and-opt-out approach that local law allows: the first screen tells you what is collected and why, nothing is sent until you leave that screen, and you can switch it off there or at any time afterwards. In Singapore, this is deemed consent by notification under section 15A of the Personal Data Protection Act 2012; we have assessed that this collection is not likely to have an adverse effect on you, and we keep that assessment on record.</p>
+  <p>If you email us, we use your address and what you write only to answer you. Where the GDPR or a similar law applies, our basis is our legitimate interest in replying to you; in Singapore, you consent by sending us the email.</p>
 
   <h2>Who processes the data</h2>
   <p>Analytics is processed by PostHog, Inc. and crash reports by Sentry (Functional Software, Inc.), both on servers in the European Union, as processors acting on our instructions. We don’t want either service to keep your IP address: the app asks PostHog not to look up a location from it and sets Sentry not to record it, and both projects are set to discard IP addresses. As with any internet request, the connection itself still reaches their servers from your IP address.</p>
@@ -176,7 +176,7 @@
   <p>两者由同一个开关控制，位置在 设置 → 分析与崩溃报告。它默认开还是关，取决于你的 App Store 账户所在地区；Tivon 只在你第一次打开时判断一次：</p>
   <ul>
     <li><strong>欧盟 / 欧洲经济区、英国、瑞士、韩国、巴西</strong>：默认关闭。第一次打开 Tivon 时会征求你的同意，你不同意就不发送任何数据。在这些地区，我们处理数据的依据是你的同意，你可以随时撤回。</li>
-    <li><strong>其他地区</strong>：默认开启。第一次打开 Tivon 时会说明收集哪些内容，开关是开着的，你可以当场关掉。看到这一页之前不会发送任何数据。</li>
+    <li><strong>其他地区</strong>：默认开启。第一次打开 Tivon 时会说明收集哪些内容，开关是开着的，你可以当场关掉。离开这一页之前不会发送任何数据，所以你可以在收集开始之前就把它关掉。</li>
     <li>如果 Tivon 判断不出你的 App Store 地区，就按第一种处理。</li>
   </ul>
   <p>第一次判断的结果会保存下来，之后不会再变；你自己改过开关以后，一律以你的选择为准。Tivon 只保存适用哪一种，不保存你的国家，也不会发送它。</p>
@@ -192,7 +192,7 @@
   <p><strong>崩溃上报</strong>——帮我们修复崩溃。开启后，崩溃发生时会发送崩溃类型、错误信息、各线程的调用栈、已加载的二进制列表，以及基本的 App 与设备信息。同时会发送 App 的打开次数和使用时长，以及一个用于统计这些次数的随机安装 ID，这是计算崩溃率所必需的。截图、视图层级和交互轨迹均已关闭。</p>
 
   <h2>两个随机标识符</h2>
-  <p>产品分析使用一个随机标识符，崩溃上报使用另一个随机安装 ID。两者都在你的设备上生成，不与你的姓名、邮箱或 Apple 账户关联。由于它们长期不变，数据保护法把它们以及带有它们的事件视为假名化的个人数据，我们也这样对待。Tivon 会在 设置 → 分析与崩溃报告 中显示产品分析的标识符，方便你行使下文所述的权利。关掉分析开关时，崩溃上报的 ID 会从你的设备上删除；产品分析的标识符会继续显示在设置里，并标明已停止上报，保留它只是为了让你仍能申请删除数据。它不会再被发送，删除 App 时一并删除。</p>
+  <p>产品分析使用一个随机标识符，崩溃上报使用另一个随机安装 ID。两者都在你的设备上生成，不与你的姓名、邮箱或 Apple 账户关联。由于它们长期不变，数据保护法把它们以及带有它们的事件视为假名化的个人数据，我们也这样对待。Tivon 会在 设置 → 分析与崩溃报告 中显示产品分析的标识符，方便你行使下文所述的权利。关掉分析开关时，崩溃上报的 ID 会从你的设备上删除；产品分析的标识符会继续显示在设置里，并标明已停止上报，保留它只是为了让你仍能申请删除数据。它不会再被发送，删除 App 时一并删除。如果你重新打开分析开关，Tivon 会继续使用这个标识符，不会生成新的，所以你的全部数据始终对应同一个标识符，可以一次申请删除。</p>
 
   <h2>我们从不收集的内容</h2>
   <ul>
@@ -210,8 +210,8 @@
 
   <h2>我们处理数据的依据</h2>
   <p>在需要你先同意的地区——欧盟 / 欧洲经济区、英国、瑞士、韩国和巴西——我们的依据是你的同意（GDPR 第 6 条第 1 款 a 项，以及英国 GDPR、韩国 PIPA、巴西 LGPD 下对应的规定）。你可以随时在设置里撤回；撤回不会使此前已经进行的处理变得不合法。</p>
-  <p>在默认开启的地区，我们的依据是正当利益（GDPR 第 6 条第 1 款 f 项）：看清楚 Tivon 的哪些部分被用到，以及让 App 不崩溃。这一利益我们已经和你的隐私做过权衡：事件里不带你设置的 App 名称，也不带你输入的任何文字；连的是一个随机标识符，而不是账号；第一屏就告诉你，当场和之后的任何时候都能关掉。你也可以反对这项处理——关掉开关是最快的做法。</p>
-  <p>你发邮件给我们时，我们基于同样的正当利益（回复你）使用你的邮箱地址和邮件内容。</p>
+  <p>在默认开启的地区，我们采用当地法律允许的「告知加退出」方式：第一屏告诉你收集什么、为什么收集，离开这一屏之前不会发送任何内容，你可以当场或之后任何时候关掉。在新加坡，这属于《2012 年个人数据保护法》（PDPA）第 15A 条规定的「通知即视为同意」；我们已评估这项收集不太可能对你造成不利影响，并保存了评估记录。</p>
+  <p>你发邮件给我们时，我们只用你的邮箱地址和邮件内容来回复你。在适用 GDPR 或类似法律的地区，依据是我们回复你的正当利益；在新加坡，你发来邮件即表示同意。</p>
 
   <h2>谁在处理这些数据</h2>
   <p>产品分析由 PostHog, Inc. 处理，崩溃上报由 Sentry（Functional Software, Inc.）处理，两者的服务器均位于欧盟，并作为受托方按我们的指示处理数据。我们不希望任何一方保留你的 IP 地址：App 会要求 PostHog 不根据 IP 推断位置，并设置 Sentry 不记录 IP；两边的项目都已设置为丢弃 IP 地址。和任何网络请求一样，连接本身仍会从你的 IP 地址到达它们的服务器。</p>
@@ -271,7 +271,7 @@
   <p>兩者由同一個開關控制，位置在 設定 → 分析與當機報告。它預設開還是關，取決於你的 App Store 帳號所在地區；Tivon 只在你第一次開啟時判斷一次：</p>
   <ul>
     <li><strong>歐盟 / 歐洲經濟區、英國、瑞士、韓國、巴西</strong>：預設關閉。第一次開啟 Tivon 時會徵求你的同意，你不同意就不傳送任何資料。在這些地區，我們處理資料的依據是你的同意，你可以隨時撤回。</li>
-    <li><strong>其他地區</strong>：預設開啟。第一次開啟 Tivon 時會說明收集哪些內容，開關是開著的，你可以當場關掉。看到這一頁之前不會傳送任何資料。</li>
+    <li><strong>其他地區</strong>：預設開啟。第一次開啟 Tivon 時會說明收集哪些內容，開關是開著的，你可以當場關掉。離開這一頁之前不會傳送任何資料，所以你可以在收集開始之前就把它關掉。</li>
     <li>如果 Tivon 判斷不出你的 App Store 地區，就按第一種處理。</li>
   </ul>
   <p>第一次判斷的結果會保存下來，之後不會再變；你自己改過開關以後，一律以你的選擇為準。Tivon 只保存適用哪一種，不保存你的國家，也不會傳送它。</p>
@@ -287,7 +287,7 @@
   <p><strong>當機報告</strong>——幫我們修復當機。開啟後，當機發生時會傳送當機類型、錯誤訊息、各執行緒的呼叫堆疊、已載入的二進位列表，以及基本的 App 與裝置資訊。同時會傳送 App 的開啟次數與使用時長，以及一個用於統計這些次數的隨機安裝 ID，這是計算當機率所必需的。螢幕截圖、視圖層級與互動軌跡均已關閉。</p>
 
   <h2>兩個隨機識別碼</h2>
-  <p>產品分析使用一個隨機識別碼，當機報告使用另一個隨機安裝 ID。兩者都在你的裝置上產生，不與你的姓名、電子郵件或 Apple 帳號關聯。由於它們長期不變，資料保護法將它們以及帶有它們的事件視為假名化的個人資料，我們也這樣對待。Tivon 會在 設定 → 分析與當機報告 中顯示產品分析的識別碼，方便你行使下文所述的權利。關掉分析開關時，當機報告的 ID 會從你的裝置上刪除；產品分析的識別碼會繼續顯示在設定裡，並標明已停止上報，保留它只是為了讓你仍能申請刪除資料。它不會再被傳送，刪除 App 時一併刪除。</p>
+  <p>產品分析使用一個隨機識別碼，當機報告使用另一個隨機安裝 ID。兩者都在你的裝置上產生，不與你的姓名、電子郵件或 Apple 帳號關聯。由於它們長期不變，資料保護法將它們以及帶有它們的事件視為假名化的個人資料，我們也這樣對待。Tivon 會在 設定 → 分析與當機報告 中顯示產品分析的識別碼，方便你行使下文所述的權利。關掉分析開關時，當機報告的 ID 會從你的裝置上刪除；產品分析的識別碼會繼續顯示在設定裡，並標明已停止上報，保留它只是為了讓你仍能申請刪除資料。它不會再被傳送，刪除 App 時一併刪除。如果你重新開啟分析開關，Tivon 會繼續使用這個識別碼，不會產生新的，所以你的全部資料始終對應同一個識別碼，可以一次申請刪除。</p>
 
   <h2>我們從不收集的內容</h2>
   <ul>
@@ -305,8 +305,8 @@
 
   <h2>我們處理資料的依據</h2>
   <p>在需要你先同意的地區——歐盟 / 歐洲經濟區、英國、瑞士、韓國和巴西——我們的依據是你的同意（GDPR 第 6 條第 1 項 a 目，以及英國 GDPR、韓國 PIPA、巴西 LGPD 下對應的規定）。你可以隨時在設定裡撤回；撤回不會使此前已經進行的處理變得不合法。</p>
-  <p>在預設開啟的地區，我們的依據是正當利益（GDPR 第 6 條第 1 項 f 目）：看清楚 Tivon 的哪些部分被用到，以及讓 App 不當機。這項利益我們已經和你的隱私做過權衡：事件裡不帶你設定的 App 名稱，也不帶你輸入的任何文字；連的是一個隨機識別碼，而不是帳號；第一屏就告訴你，當場和之後的任何時候都能關掉。你也可以反對這項處理——關掉開關是最快的做法。</p>
-  <p>你寄信給我們時，我們基於同樣的正當利益（回覆你）使用你的電子郵件地址和信件內容。</p>
+  <p>在預設開啟的地區，我們採用當地法律允許的「告知加退出」方式：第一屏告訴你收集什麼、為什麼收集，離開這一屏之前不會傳送任何內容，你可以當場或之後任何時候關掉。在新加坡，這屬於《2012 年個人資料保護法》（PDPA）第 15A 條規定的「經通知視為同意」；我們已評估這項收集不太可能對你造成不利影響，並保存了評估記錄。</p>
+  <p>你寄信給我們時，我們只用你的電子郵件地址與信件內容來回覆你。在適用 GDPR 或類似法律的地區，依據是我們回覆你的正當利益；在新加坡，你寄信給我們即表示同意。</p>
 
   <h2>誰在處理這些資料</h2>
   <p>產品分析由 PostHog, Inc. 處理，當機報告由 Sentry（Functional Software, Inc.）處理，兩者的伺服器皆位於歐盟，並作為受託方依我們的指示處理資料。我們不希望任何一方保留你的 IP 位址：App 會要求 PostHog 不根據 IP 推斷位置，並設定 Sentry 不記錄 IP；兩邊的專案都已設定為捨棄 IP 位址。和任何網路請求一樣，連線本身仍會從你的 IP 位址到達它們的伺服器。</p>

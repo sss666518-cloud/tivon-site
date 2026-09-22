@@ -75,7 +75,7 @@
     <li>Your pause history: which app each pause was for, when it happened, whether you left or continued, and any answer you gave</li>
     <li>Your settings and preferences</li>
   </ul>
-  <p>This history is not uploaded to us, and deleting the app removes it. While analytics is on, Tivon also sends a separate event for each pause (see below). It never names the app the pause was for; if that app is in Tivon’s built-in list, it says which category the app is in, such as social or video.</p>
+  <p>This history is not uploaded to us, and deleting the app removes it. While analytics is on, Tivon also sends a separate event for each pause (see below). It never names the app the pause was for; if that app is in Tivon’s built-in list, it says which category the app is in, such as social or video. Apps in sensitive categories — dating, adult, gambling, and health or medical — are always reported as “other”, so the category never reveals them; only neutral categories such as social, video, games, news or shopping are reported as they are.</p>
 
   <h2>Analytics and crash reports</h2>
   <p>One switch, in Settings → Analytics &amp; crash reports, controls both. Whether it starts on or off depends on the region of your App Store account, which Tivon checks once, the first time you open it:</p>
@@ -83,13 +83,14 @@
     <li><strong>EU / EEA, the UK, Switzerland, South Korea and Brazil</strong>: off. When you first open Tivon, it asks. Nothing is sent unless you agree. Here we rely on your consent, which you can withdraw at any time.</li>
     <li><strong>Everywhere else</strong>: on. When you first open Tivon, it shows what is collected, with the switch on, and you can turn it off right there. Nothing is sent until you leave that screen, so you can switch it off before anything is collected.</li>
     <li>If Tivon cannot tell your App Store region, it treats you as in the first group.</li>
+    <li>The group follows your App Store storefront region, not where you are. If the law where you live requires consent first and your storefront region is not in the first group, you can switch analytics off in Settings at any time.</li>
   </ul>
   <p>Tivon keeps the result of that first check and does not change it later, and once you have set the switch yourself, your choice always wins. Tivon stores only which of the two groups applies, not your country, and does not send it.</p>
 
   <p><strong>Product analytics</strong> — helps us see which parts of the app work. When on, we send events about how Tivon is used, for example that you completed setup, that a pause appeared and how you responded to it, or that you viewed the subscription page or started a subscription. Depending on the event, it can include:</p>
   <ul>
     <li>For a pause: whether you left or continued, how long you took to choose, the time of day (one of five periods, such as morning), and the pause style shown</li>
-    <li>For setup and automations: how many apps you have set up and how far you got in the setup guide; for an app in Tivon’s built-in list, its category (such as social or video). Never the app’s name or anything you typed</li>
+    <li>For setup and automations: how many apps you have set up and how far you got in the setup guide; for an app in Tivon’s built-in list, its category (such as social or video; sensitive categories are reported as “other”, as described above). Never the app’s name or anything you typed</li>
     <li>For purchases: the Tivon subscription product (monthly or annual), never prices or payment details</li>
   </ul>
   <p>Every event also carries your app version and build, iOS version, device model and type, the language Tivon is shown in, your plan (Free or Pro), the calendar week (for example 2026-W38), the exact time of the event, a session ID, random numbers that tie related events together (for example, one per pause), and a random identifier (pseudonymous; see below), plus technical details such as the version of the consent or notice screen you saw and the version of the analytics library. Events never contain the name or identifier of any app you set up, or the text you entered for it in Shortcuts.</p>
@@ -170,7 +171,7 @@
     <li>你的停顿记录：每次停顿对应的 App、发生的时间、你选择了离开还是继续，以及你给出的回答</li>
     <li>你的设置和偏好</li>
   </ul>
-  <p>这些记录不会上传给我们，删除 App 即一并删除。产品分析开着时，Tivon 还会为每次停顿另外发送一个事件（见下文）。其中从不包含这次停顿对应的 App 名称；如果那个 App 在 Tivon 内置的 App 目录里，会带上它的类别，例如社交或视频。</p>
+  <p>这些记录不会上传给我们，删除 App 即一并删除。产品分析开着时，Tivon 还会为每次停顿另外发送一个事件（见下文）。其中从不包含这次停顿对应的 App 名称；如果那个 App 在 Tivon 内置的 App 目录里，会带上它的类别，例如社交或视频。约会、成人、赌博、健康医疗这四类敏感品类的 App 一律报为「其他」，所以类别不会暴露它们；只有社交、视频、游戏、新闻、购物这类中性品类才如实上报。</p>
 
   <h2>产品分析与崩溃上报</h2>
   <p>两者由同一个开关控制，位置在 设置 → 分析与崩溃报告。它默认开还是关，取决于你的 App Store 账户所在地区；Tivon 只在你第一次打开时判断一次：</p>
@@ -178,13 +179,14 @@
     <li><strong>欧盟 / 欧洲经济区、英国、瑞士、韩国、巴西</strong>：默认关闭。第一次打开 Tivon 时会征求你的同意，你不同意就不发送任何数据。在这些地区，我们处理数据的依据是你的同意，你可以随时撤回。</li>
     <li><strong>其他地区</strong>：默认开启。第一次打开 Tivon 时会说明收集哪些内容，开关是开着的，你可以当场关掉。离开这一页之前不会发送任何数据，所以你可以在收集开始之前就把它关掉。</li>
     <li>如果 Tivon 判断不出你的 App Store 地区，就按第一种处理。</li>
+    <li>分组依据的是你的 App Store 店面地区，而不是你所在的位置。如果你所在地区的法律要求先征得同意，而你的店面地区不属于第一种，你可以随时在设置里关掉这个开关。</li>
   </ul>
   <p>第一次判断的结果会保存下来，之后不会再变；你自己改过开关以后，一律以你的选择为准。Tivon 只保存适用哪一种，不保存你的国家，也不会发送它。</p>
 
   <p><strong>产品分析</strong>——帮我们了解 App 的哪些部分真正有用。开启后会发送 Tivon 的使用事件，例如你完成了设置、出现了一次停顿以及你对它的回应，或你查看了订阅页、开始了订阅。视事件不同，可能包含：</p>
   <ul>
     <li>停顿：你离开还是继续、做出选择用了多久、所在时段（一天分为五段，例如上午）、显示的停顿形态</li>
-    <li>设置与自动化：你设置了几个 App、在设置指南里走到了第几步；如果 App 在 Tivon 内置的目录里，还有它的类别（例如社交、视频）。从不包含 App 名称或你输入的文字</li>
+    <li>设置与自动化：你设置了几个 App、在设置指南里走到了第几步；如果 App 在 Tivon 内置的目录里，还有它的类别（例如社交、视频；敏感品类按上文所述报为「其他」）。从不包含 App 名称或你输入的文字</li>
     <li>购买：Tivon 的订阅产品（月度或年度），从不包含价格或支付信息</li>
   </ul>
   <p>每个事件还会附带 App 版本与构建号、iOS 版本、设备型号与类型、Tivon 显示的语言、你的方案（免费版或 Pro）、所在周（例如 2026-W38）、事件发生的准确时间、会话 ID、把相关事件串起来的随机编号（例如每次停顿一个），以及一个随机标识符（假名，见下文）；另有你看到的同意页或说明页的版本、分析组件的版本等技术信息。事件中不包含任何你设置的 App 的名称或标识，也不包含你在快捷指令里为它输入的文字。</p>
@@ -265,7 +267,7 @@
     <li>你的停頓記錄：每次停頓對應的 App、發生的時間、你選擇離開還是繼續，以及你給出的回答</li>
     <li>你的設定與偏好</li>
   </ul>
-  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。產品分析開著時，Tivon 還會為每次停頓另外傳送一個事件（見下文）。其中從不包含這次停頓對應的 App 名稱；如果那個 App 在 Tivon 內建的 App 目錄裡，會帶上它的類別，例如社群或影音。</p>
+  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。產品分析開著時，Tivon 還會為每次停頓另外傳送一個事件（見下文）。其中從不包含這次停頓對應的 App 名稱；如果那個 App 在 Tivon 內建的 App 目錄裡，會帶上它的類別，例如社群或影音。約會、成人、賭博、健康醫療這四類敏感類別的 App 一律回報為「其他」，所以類別不會暴露它們；只有社群、影音、遊戲、新聞、購物這類中性類別才如實回報。</p>
 
   <h2>產品分析與當機報告</h2>
   <p>兩者由同一個開關控制，位置在 設定 → 分析與當機報告。它預設開還是關，取決於你的 App Store 帳號所在地區；Tivon 只在你第一次開啟時判斷一次：</p>
@@ -273,13 +275,14 @@
     <li><strong>歐盟 / 歐洲經濟區、英國、瑞士、韓國、巴西</strong>：預設關閉。第一次開啟 Tivon 時會徵求你的同意，你不同意就不傳送任何資料。在這些地區，我們處理資料的依據是你的同意，你可以隨時撤回。</li>
     <li><strong>其他地區</strong>：預設開啟。第一次開啟 Tivon 時會說明收集哪些內容，開關是開著的，你可以當場關掉。離開這一頁之前不會傳送任何資料，所以你可以在收集開始之前就把它關掉。</li>
     <li>如果 Tivon 判斷不出你的 App Store 地區，就按第一種處理。</li>
+    <li>分組依據的是你的 App Store 店面地區，而不是你所在的位置。如果你所在地區的法律要求先徵得同意，而你的店面地區不屬於第一種，你可以隨時在設定裡關掉這個開關。</li>
   </ul>
   <p>第一次判斷的結果會保存下來，之後不會再變；你自己改過開關以後，一律以你的選擇為準。Tivon 只保存適用哪一種，不保存你的國家，也不會傳送它。</p>
 
   <p><strong>產品分析</strong>——幫我們了解 App 的哪些部分真正有用。開啟後會傳送 Tivon 的使用事件，例如你完成了設定、出現了一次停頓以及你對它的回應，或你查看了訂閱頁、開始了訂閱。視事件不同，可能包含：</p>
   <ul>
     <li>停頓：你離開還是繼續、做出選擇用了多久、所在時段（一天分為五段，例如上午）、顯示的停頓形態</li>
-    <li>設定與自動化：你設定了幾個 App、在設定指南裡走到了第幾步；如果 App 在 Tivon 內建的目錄裡，還有它的類別（例如社群、影音）。從不包含 App 名稱或你輸入的文字</li>
+    <li>設定與自動化：你設定了幾個 App、在設定指南裡走到了第幾步；如果 App 在 Tivon 內建的目錄裡，還有它的類別（例如社群、影音；敏感類別依上文所述回報為「其他」）。從不包含 App 名稱或你輸入的文字</li>
     <li>購買：Tivon 的訂閱產品（月訂閱或年訂閱），從不包含價格或付款資訊</li>
   </ul>
   <p>每個事件還會附帶 App 版本與 build 號、iOS 版本、裝置型號與類型、Tivon 顯示的語言、你的方案（免費版或 Pro）、所在週（例如 2026-W38）、事件發生的準確時間、工作階段 ID、把相關事件串起來的隨機編號（例如每次停頓一個），以及一個隨機識別碼（假名，見下文）；另有你看到的同意頁或說明頁的版本、分析元件的版本等技術資訊。事件中不包含任何你設定的 App 的名稱或識別碼，也不包含你在捷徑裡為它輸入的文字。</p>

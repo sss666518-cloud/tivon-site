@@ -75,7 +75,7 @@
     <li>Your pause history: which app each pause was for, when it happened, whether you left or continued, and any answer you gave</li>
     <li>Your settings and preferences</li>
   </ul>
-  <p>This history is not uploaded to us, and deleting the app removes it. While analytics is on, Tivon also sends a separate event for each pause (see below). It never names the app the pause was for; if that app is in Tivon’s built-in list, it says which category the app is in, such as social or video. Apps in sensitive categories — dating, adult, gambling, and health or medical — are always reported as “other”, so the category never reveals them; only neutral categories such as social, video, games, news or shopping are reported as they are. If a category has too few apps in Tivon’s list (fewer than five), it is reported as “other” too, so the category can never point to one particular app.</p>
+  <p>This history is not uploaded to us, and deleting the app removes it. While analytics is on, Tivon also sends a separate event for each pause (see below). It never names the app the pause was for; if that app is in Tivon’s built-in list, it says which category the app is in, such as social or video. Apps in sensitive categories — dating, adult, gambling, and health or medical — are sent without any category, exactly like apps that are not in the list, so they cannot be told apart. The same goes for a category with too few apps in the list (fewer than five). Only neutral categories such as social, video, games, news or shopping are sent as they are, so a category can never point to one particular app.</p>
 
   <h2>Analytics and crash reports</h2>
   <p>One switch, in Settings → Analytics &amp; crash reports, controls both. Whether it starts on or off depends on the region of your App Store account, which Tivon checks once, the first time you open it:</p>
@@ -90,7 +90,7 @@
   <p><strong>Product analytics</strong> — helps us see which parts of the app work. When on, we send events about how Tivon is used, for example that you completed setup, that a pause appeared and how you responded to it, or that you viewed the subscription page or started a subscription. Depending on the event, it can include:</p>
   <ul>
     <li>For a pause: whether you left or continued, how long you took to choose, the time of day (one of five periods, such as morning), and the pause style shown</li>
-    <li>For setup and automations: how many apps you have set up and how far you got in the setup guide; for an app in Tivon’s built-in list, its category (such as social or video; sensitive categories are reported as “other”, as described above). Never the app’s name or anything you typed</li>
+    <li>For setup and automations: how many apps you have set up and how far you got in the setup guide; for an app in Tivon’s built-in list, its category (such as social or video; some categories are left out, as described above). Never the app’s name or anything you typed</li>
     <li>For purchases: the Tivon subscription product (monthly or annual), never prices or payment details</li>
   </ul>
   <p>Every event also carries your app version and build, iOS version, device model and type, the language Tivon is shown in, your plan (Free or Pro), the calendar week (for example 2026-W38), the exact time of the event, a session ID, random numbers that tie related events together (for example, one per pause), and a random identifier (pseudonymous; see below), plus technical details such as the version of the consent or notice screen you saw and the version of the analytics library. Events never contain the name or identifier of any app you set up, or the text you entered for it in Shortcuts.</p>
@@ -125,7 +125,7 @@
   <h2>How long data is kept</h2>
   <ul>
     <li>Product analytics: 12 months, then deleted</li>
-    <li>Crash reports: 90 days, then deleted</li>
+    <li>Crash reports: at most 30 days, then deleted</li>
     <li>Emails you send us: 24 months, then deleted</li>
   </ul>
   <p>Your pause history and settings stay on your device until you delete the app. Anything still queued for upload is deleted from your device when you switch analytics off.</p>
@@ -141,7 +141,7 @@
   <ul>
     <li><strong>Withdraw consent or stop collection</strong>: switch off Analytics &amp; crash reports. It takes effect immediately.</li>
     <li><strong>Delete or export analytics data</strong>: in Settings → Analytics &amp; crash reports, copy your identifier and email it to <a href="mailto:sinny666518@gmail.com">sinny666518@gmail.com</a>, saying whether you want your data deleted or a copy of it in a machine-readable format. We will do this within 30 days of receiving your email and reply to confirm. The identifier stays there after you switch analytics off. Deleting the app removes it, so copy it first if you may want to make a request later; without it we cannot find your data.</li>
-    <li><strong>Crash reports</strong> use a separate identifier that Tivon does not show, so we cannot find them for a particular person. They are deleted automatically after 90 days.</li>
+    <li><strong>Crash reports</strong> use a separate identifier that Tivon does not show, so we cannot find them for a particular person. They are deleted automatically after at most 30 days.</li>
     <li><strong>Data on your device</strong>: deleting the app removes it.</li>
     <li><strong>Emails you sent us</strong>: ask at the same address and we will delete them within 30 days.</li>
   </ul>
@@ -171,7 +171,7 @@
     <li>你的停顿记录：每次停顿对应的 App、发生的时间、你选择了离开还是继续，以及你给出的回答</li>
     <li>你的设置和偏好</li>
   </ul>
-  <p>这些记录不会上传给我们，删除 App 即一并删除。产品分析开着时，Tivon 还会为每次停顿另外发送一个事件（见下文）。其中从不包含这次停顿对应的 App 名称；如果那个 App 在 Tivon 内置的 App 目录里，会带上它的类别，例如社交或视频。约会、成人、赌博、健康医疗这四类敏感品类的 App 一律报为「其他」，所以类别不会暴露它们；只有社交、视频、游戏、新闻、购物这类中性品类才如实上报。如果某个类别在 Tivon 目录里的 App 太少（不到 5 个），也会报为「其他」，这样类别永远不会指向某一个具体的 App。</p>
+  <p>这些记录不会上传给我们，删除 App 即一并删除。产品分析开着时，Tivon 还会为每次停顿另外发送一个事件（见下文）。其中从不包含这次停顿对应的 App 名称；如果那个 App 在 Tivon 内置的 App 目录里，会带上它的类别，例如社交或视频。约会、成人、赌博、健康医疗这四类敏感品类的 App，会和不在目录里的 App 一样，不带类别，两者分不出来。某个类别在目录里的 App 太少（不到 5 个）时也一样。只有社交、视频、游戏、新闻、购物这类中性品类才如实上报，所以类别永远不会指向某一个具体的 App。</p>
 
   <h2>产品分析与崩溃上报</h2>
   <p>两者由同一个开关控制，位置在 设置 → 分析与崩溃报告。它默认开还是关，取决于你的 App Store 账户所在地区；Tivon 只在你第一次打开时判断一次：</p>
@@ -186,7 +186,7 @@
   <p><strong>产品分析</strong>——帮我们了解 App 的哪些部分真正有用。开启后会发送 Tivon 的使用事件，例如你完成了设置、出现了一次停顿以及你对它的回应，或你查看了订阅页、开始了订阅。视事件不同，可能包含：</p>
   <ul>
     <li>停顿：你离开还是继续、做出选择用了多久、所在时段（一天分为五段，例如上午）、显示的停顿形态</li>
-    <li>设置与自动化：你设置了几个 App、在设置指南里走到了第几步；如果 App 在 Tivon 内置的目录里，还有它的类别（例如社交、视频；敏感品类按上文所述报为「其他」）。从不包含 App 名称或你输入的文字</li>
+    <li>设置与自动化：你设置了几个 App、在设置指南里走到了第几步；如果 App 在 Tivon 内置的目录里，还有它的类别（例如社交、视频；有些类别按上文所述不上报）。从不包含 App 名称或你输入的文字</li>
     <li>购买：Tivon 的订阅产品（月度或年度），从不包含价格或支付信息</li>
   </ul>
   <p>每个事件还会附带 App 版本与构建号、iOS 版本、设备型号与类型、Tivon 显示的语言、你的方案（免费版或 Pro）、所在周（例如 2026-W38）、事件发生的准确时间、会话 ID、把相关事件串起来的随机编号（例如每次停顿一个），以及一个随机标识符（假名，见下文）；另有你看到的同意页或说明页的版本、分析组件的版本等技术信息。事件中不包含任何你设置的 App 的名称或标识，也不包含你在快捷指令里为它输入的文字。</p>
@@ -221,7 +221,7 @@
   <h2>保存多久</h2>
   <ul>
     <li>产品分析数据：12 个月，之后删除</li>
-    <li>崩溃报告：90 天，之后删除</li>
+    <li>崩溃报告：最多 30 天，之后删除</li>
     <li>你发给我们的邮件：24 个月，之后删除</li>
   </ul>
   <p>停顿记录和设置保存在你的设备上，直到你删除 App。关掉分析开关时，设备上尚未上传的数据会被删除。</p>
@@ -237,7 +237,7 @@
   <ul>
     <li><strong>撤回同意、停止收集</strong>：关掉「分析与崩溃报告」，立即生效。</li>
     <li><strong>删除或导出产品分析数据</strong>：在 设置 → 分析与崩溃报告 中复制你的标识符，发邮件到 <a href="mailto:sinny666518@gmail.com">sinny666518@gmail.com</a>，说明你要删除数据，还是要一份机器可读格式的副本。我们会在收到邮件后 30 天内处理完毕并回复确认。关掉分析开关后，标识符仍会显示在那里；删除 App 会把它一并删除，如果你之后可能要提出申请，请先复制保存。没有它，我们无法找到你的数据。</li>
-    <li><strong>崩溃报告</strong>使用另一个 Tivon 不会显示的标识符，因此我们无法按人查找。它们会在 90 天后自动删除。</li>
+    <li><strong>崩溃报告</strong>使用另一个 Tivon 不会显示的标识符，因此我们无法按人查找。它们最多保存 30 天，之后自动删除。</li>
     <li><strong>设备上的数据</strong>：删除 App 即可全部删除。</li>
     <li><strong>你发给我们的邮件</strong>：发邮件到同一地址要求删除，我们会在 30 天内删除。</li>
   </ul>
@@ -267,7 +267,7 @@
     <li>你的停頓記錄：每次停頓對應的 App、發生的時間、你選擇離開還是繼續，以及你給出的回答</li>
     <li>你的設定與偏好</li>
   </ul>
-  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。產品分析開著時，Tivon 還會為每次停頓另外傳送一個事件（見下文）。其中從不包含這次停頓對應的 App 名稱；如果那個 App 在 Tivon 內建的 App 目錄裡，會帶上它的類別，例如社群或影音。約會、成人、賭博、健康醫療這四類敏感類別的 App 一律回報為「其他」，所以類別不會暴露它們；只有社群、影音、遊戲、新聞、購物這類中性類別才如實回報。如果某個類別在 Tivon 目錄裡的 App 太少（不到 5 個），也會回報為「其他」，這樣類別永遠不會指向某一個特定的 App。</p>
+  <p>這些記錄不會上傳給我們，刪除 App 即一併刪除。產品分析開著時，Tivon 還會為每次停頓另外傳送一個事件（見下文）。其中從不包含這次停頓對應的 App 名稱；如果那個 App 在 Tivon 內建的 App 目錄裡，會帶上它的類別，例如社群或影音。約會、成人、賭博、健康醫療這四類敏感類別的 App，會和不在目錄裡的 App 一樣，不帶類別，兩者分不出來。某個類別在目錄裡的 App 太少（不到 5 個）時也一樣。只有社群、影音、遊戲、新聞、購物這類中性類別才如實回報，所以類別永遠不會指向某一個特定的 App。</p>
 
   <h2>產品分析與當機報告</h2>
   <p>兩者由同一個開關控制，位置在 設定 → 分析與當機報告。它預設開還是關，取決於你的 App Store 帳號所在地區；Tivon 只在你第一次開啟時判斷一次：</p>
@@ -282,7 +282,7 @@
   <p><strong>產品分析</strong>——幫我們了解 App 的哪些部分真正有用。開啟後會傳送 Tivon 的使用事件，例如你完成了設定、出現了一次停頓以及你對它的回應，或你查看了訂閱頁、開始了訂閱。視事件不同，可能包含：</p>
   <ul>
     <li>停頓：你離開還是繼續、做出選擇用了多久、所在時段（一天分為五段，例如上午）、顯示的停頓形態</li>
-    <li>設定與自動化：你設定了幾個 App、在設定指南裡走到了第幾步；如果 App 在 Tivon 內建的目錄裡，還有它的類別（例如社群、影音；敏感類別依上文所述回報為「其他」）。從不包含 App 名稱或你輸入的文字</li>
+    <li>設定與自動化：你設定了幾個 App、在設定指南裡走到了第幾步；如果 App 在 Tivon 內建的目錄裡，還有它的類別（例如社群、影音；有些類別依上文所述不回報）。從不包含 App 名稱或你輸入的文字</li>
     <li>購買：Tivon 的訂閱產品（月訂閱或年訂閱），從不包含價格或付款資訊</li>
   </ul>
   <p>每個事件還會附帶 App 版本與 build 號、iOS 版本、裝置型號與類型、Tivon 顯示的語言、你的方案（免費版或 Pro）、所在週（例如 2026-W38）、事件發生的準確時間、工作階段 ID、把相關事件串起來的隨機編號（例如每次停頓一個），以及一個隨機識別碼（假名，見下文）；另有你看到的同意頁或說明頁的版本、分析元件的版本等技術資訊。事件中不包含任何你設定的 App 的名稱或識別碼，也不包含你在捷徑裡為它輸入的文字。</p>
@@ -317,7 +317,7 @@
   <h2>保存多久</h2>
   <ul>
     <li>產品分析資料：12 個月，之後刪除</li>
-    <li>當機報告：90 天，之後刪除</li>
+    <li>當機報告：最多 30 天，之後刪除</li>
     <li>你寄給我們的信件：24 個月，之後刪除</li>
   </ul>
   <p>停頓記錄與設定保存在你的裝置上，直到你刪除 App。關掉分析開關時，裝置上尚未上傳的資料會被刪除。</p>
@@ -333,7 +333,7 @@
   <ul>
     <li><strong>撤回同意、停止收集</strong>：關掉「分析與當機報告」，立即生效。</li>
     <li><strong>刪除或匯出產品分析資料</strong>：在 設定 → 分析與當機報告 中複製你的識別碼，寄信到 <a href="mailto:sinny666518@gmail.com">sinny666518@gmail.com</a>，說明你要刪除資料，還是要一份機器可讀格式的副本。我們會在收到信件後 30 天內處理完畢並回覆確認。關掉分析開關後，識別碼仍會顯示在那裡；刪除 App 會把它一併刪除，如果你之後可能要提出申請，請先複製保存。沒有它，我們無法找到你的資料。</li>
-    <li><strong>當機報告</strong>使用另一個 Tivon 不會顯示的識別碼，因此我們無法按人查找。它們會在 90 天後自動刪除。</li>
+    <li><strong>當機報告</strong>使用另一個 Tivon 不會顯示的識別碼，因此我們無法按人查找。它們最多保存 30 天，之後自動刪除。</li>
     <li><strong>裝置上的資料</strong>：刪除 App 即可全部刪除。</li>
     <li><strong>你寄給我們的信件</strong>：寄信到同一地址要求刪除，我們會在 30 天內刪除。</li>
   </ul>
